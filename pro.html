@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Being human.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="/Project-2/css/phone.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: url(https://www.rootsofaction.com/wp-content/uploads/2018/04/25-Quotes-about-Empathy-400x265.png) no-repeat center center/cover;
+    }
+   
+     html{
+        scroll-behavior: smooth;
+    }
+    
+    /* CSS Variables */
+    :root{
+        --navbar-height: 59px;
+    }
+    
+    /* Navigation Bar */
+    #navbar{
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0px;
+    }
+    
+    #navbar::before{
+        content: "";
+        background-color: black;
+        position: absolute;
+        top:0px;
+        left:0px;
+        height: 100%;
+        width:100%;
+        z-index: -1;
+        opacity: 0.7;
+    }
+    
+    /* Navigation Bar: Logo and Image */
+    #logo{
+        margin: 10px 34px;
+    }
+    #logo a{
+        text-decoration: none;
+        color: black;
+        font-size: 55px;
+    }
+    
+    #logo img{
+        height: 59px;
+        margin: 3px 6px;
+    }
+    
+    
+    /* Navigation Bar: List Styling */
+    
+    #navbar ul{
+        display: flex;
+        font-family: 'Baloo Bhai', cursive;
+    }
+    
+    #navbar ul li{ 
+        list-style: none;
+        font-size: 1.3rem;
+    }
+    
+    #navbar ul li a{
+        color: white;
+        display: block;
+        padding: 3px 22px;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+    
+    #navbar ul li a:hover{
+        color: black;
+        background-color: white;
+    }
+    
+    /* Home Section */
+    #home{
+        display: flex;
+        flex-direction: column;
+        padding:3px 200px;
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #home::before{ 
+        content: "";
+        position: absolute;
+        background: url('photo-1488521787991-ed7bbaae773c.jpg') no-repeat center center/cover;
+        height: 642px;
+        top:0px;
+        left:0px;
+        width: 100%;
+        z-index: -1;
+        opacity:1;
+    }
+    
+    #home h1{
+        color: rgb(255, 254, 254);
+        text-align: left;
+    }
+    /* Utility Classes */
+    .h-secondary {
+        font-family: 'Bree Serif', serif;
+        font-size: 2.3rem;
+        padding: 12px;
+    }
+    .h-primary{
+        font-size: 5.1rem;
+        padding:12px;
+        
+    }
+    #home p{
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    #home form{
+            background-color: rgb(63, 65, 62); 
+            border: none;
+            color:white;
+            padding: 13px 14px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 40px;
+            font-size: 28px;
+            border-radius: 20px;
+    }
+    
+    /* Services Section */
+    #services{
+        margin: 34px;
+        display: flex;
+    }
+    #services .box{ 
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 2px 55px;
+        border-radius: 28px;
+        background: #f2f2f2;
+        margin-bottom: 20px;
+    }
+    
+    #services .box img{ 
+       height: 160px;
+       margin: auto;
+       display: block;
+    }
+    
+    #services .box p{
+        font-family: 'Bree Serif', serif;
+    
+    } 
+    #services-container h1{
+        text-align: center;
+        font-size: 45px;
+    }
+    
+    #causes{
+        margin: 34px;
+        display: flex;
+    }
+    #causes .box{ 
+        border: 2px solid rgb(32, 46, 233);
+        padding: 34px;
+        margin: 2px 55px;
+        border-style:dashed;
+        background: #f2f2f2;
+        margin-bottom: 20px;
+    }
+    
+    #causes .box img{ 
+       height: 160px;
+       margin: auto;
+       display: block;
+    }
+    
+    #causes .box p{
+        font-family: 'Bree Serif', serif;
+    
+    } 
+    #causes .box a{
+        text-decoration: none;
+        color: black;
+        margin: auto;
+    }
+    #causes .box a:hover{
+        color: red;
+    }
+    #cc h1{
+        text-align: center;
+        font-size: 45px;
+    }
+    footer{
+        background: black;
+        color: white;
+        padding: 9px 20px;
+    }
+    .center{
+        text-align: center;
+    }
+    
+    #client-section::before{
+        content: "";
+        position: absolute;
+        background: url('../bg.jpg');
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.3;
+       }
+    #clients{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .client-item{
+        padding:34px;
+    }
+    #client-section h1{
+        text-align: center;
+        font-size: 45px;
+    }
+    
+    .client-item img{
+       height: 160px;
+       margin: auto;
+       display: block;
+    }
+    
+    #contact{
+        position: relative;
+    }
+    #contact::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        background: url('../contact.jpg') no-repeat center center/cover;
+    
+    }
+    
+    #contact-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+    
+    #contact-box input, 
+    #contact-box textarea{
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+    } 
+    
+    #contact-box form{
+        width: 40%;
+    }
+    
+    #contact-box label{
+       font-size: 1.3rem;
+       font-family: 'Bree Serif', serif;
+    
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <a href="">
+                <img src="images/logo.png" alt=""> 
+            </a>
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">About Us</a></li>
+            <li class="item"><a href="#client-section">News</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Donate 4 a Better World !!! </h1>
+        <p>Being human has transformed the lives of over 14 million children since its establishment. </p>
+        <p>Be it nutrition, healthcare, protection, education, and response in the time of emergencies, Being human has been on the forefront, reshaping the lives of millions of children, since its establishment in India. </p>
+        <br>
+        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IcxfCUuqnn1teV" async> </script> </form>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="images/volunter.jpeg" alt="">
+                <h2 class="h-secondary center">Become a Volunteer</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et qui, repudiandae similique nam, recusandae quidem ab asperiores ex, aut fugit labore veritatis facere?
+                    sint delectus ab dolorum nam. Debitis facere, incidunt voluptates eos, mollitia voluptatem iste sunt
+                    voluptas beatae facilis labore, omnis sint quae eum.</p>
+            </div>
+            <div class="box">
+                <img src="images/charity.jpeg" alt="">
+                <h2 class="h-secondary center">Events</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde laudantium a incidunt animi ad, ab dignissimos vero? Unde numquam odit repudiandae perferendis.</p>
+            </div>
+            <div class="box">
+                <img src="images/food.jpeg" alt="">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus provident fugiat aliquam minima at explicabo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cc">
+        <h1 class="h-primary center"> Our Causes</h1>
+        <div id="causes">
+            <div class="box">
+                <img src="images/water.jpeg" alt="">
+                <h2><a href="">Bring water to the children</a></h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error</p>
+                <p> Raised : Rs 60,88,360</p>
+            </div>
+            <div class="box">
+                <img src="images/education.jpeg" alt="">
+                <h2><a href="">Education for all</a></h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error</p>
+                <p> Raised : Rs 36,66,889</p>
+            </div>
+            <div class="box">
+                <img src="images/child.jpeg" alt="">
+                <h2><a href="">Show humanity towards children</a></h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error</p>
+                <p> Raised : Rs 99,88,980</p>
+        
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.Being human.com. All rights reserved!
+        </div>
+    </footer>
+   </body>
+</html>
